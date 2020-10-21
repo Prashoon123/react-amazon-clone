@@ -7,13 +7,6 @@ import Checkout from './Checkout';
 import Login from './Login';
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase';
-import Payment from './Payment';
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements } from '@stripe/react-stripe-js';
-
-const promise = loadStripe(
-  'pk_test_51HdvU2BAwpXrV8qJx0LRLCVOrqAuMZ8LEJJr7fRHYZe7CLLFl2DuNN1eka7Wi8klURcbryieEZUk0qjhCFecG05T00qkaOkkqB'
-);
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -72,22 +65,5 @@ function App() {
     </Router>
     
   );
-}
-// eslint-disable-next-line
-{ 
-  /* We NEED React-ROUTER 👇 */ 
-}
-// eslint-disable-next-line
-{ 
-  /* localhost.com/ */ 
-}
-// eslint-disable-next-line
-{ 
-  /* localhost.com/checkout */ 
-}
-// eslint-disable-next-line
-{ 
-  /* localhost.com/login */ 
-}
 
 export default App;
